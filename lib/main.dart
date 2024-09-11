@@ -1,3 +1,4 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 import 'base/bottom_nav_bar.dart';
@@ -13,38 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            // primarySwatch: Colors.blue,
-            ),
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.grey,
-            title: const Text("Steve's Home"),
-            elevation: 0.0,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+          // primarySwatch: Colors.blue,
           ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text("Aram Kim"),
-                BottomNavBar(),
-              ],
-            ),
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: "Home",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
-                label: "Settings",
-              )
-            ],
-          ),
-        ));
+      debugShowCheckedModeBanner: false,
+      home: BottomNavBar(),
+    );
   }
 }
